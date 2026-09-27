@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ONG Esperança | Cadastro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+<header>
+<h1>Cadastro de colaboradores</h1>
+<nav aria-label="Navegação principal">
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="projetos.html">Projetos</a></li>
+<li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+</ul>
+</nav>
+</header>
+
+<main id="conteudo-principal">
+<section aria-labelledby="titulo-cadastro">
+
+<h2 id="titulo-cadastro">Formulário de cadastro</h2>
+
+<p>
+Preencha os campos abaixo para demonstrar interesse
+em colaborar com a ONG.
+</p>
+
+<div id="alerta" class="alerta" role="alert" hidden>
+Cadastro realizado com sucesso!
+</div>
+
+<form id="formulario-cadastro" action="#" method="post">
+
+<fieldset>
+<legend>Dados pessoais</legend>
+
+<p>
+<label for="nome">Nome completo</label>
+<input type="text" id="nome" name="nome"
+autocomplete="name" required>
+</p>
+
+<p>
+<label for="email">E-mail</label>
+<input type="email" id="email" name="email"
+autocomplete="email" required>
+</p>
+
+<p>
+<label for="data_nascimento">Data de nascimento</label>
+<input type="date" id="data_nascimento"
+name="data_nascimento" autocomplete="bday" required>
+</p>
+
+<p>
+<label for="cpf">CPF</label>
+<input type="text" id="cpf" name="cpf"
+inputmode="numeric" autocomplete="off"
+pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+placeholder="000.000.000-00"
+title="Digite o CPF no formato 000.000.000-00"
+required>
+</p>
+
+<p>
+<label for="telefone">Telefone</label>
+<input type="tel" id="telefone" name="telefone"
+inputmode="tel" autocomplete="tel"
+pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+placeholder="(00) 00000-0000"
+title="Digite o telefone no formato (00) 00000-0000"
+required>
+</p>
+</fieldset>
+
+<fieldset>
+<legend>Endereço</legend>
+
+<p>
+<label for="endereco">Endereço</label>
+<textarea id="endereco" name="endereco"
+autocomplete="street-address" rows="3" required></textarea>
+</p>
+
+<p>
+<label for="cidade">Cidade</label>
+<input type="text" id="cidade" name="cidade"
+autocomplete="address-level2" required>
+</p>
+
+<p>
+<label for="estado">Estado</label>
+<input type="text" id="estado" name="estado"
+autocomplete="address-level1" maxlength="2"
+placeholder="SP" required>
+</p>
+
+<p>
+<label for="cep">CEP</label>
+<input type="text" id="cep" name="cep"
+inputmode="numeric" autocomplete="postal-code"
+pattern="[0-9]{5}-[0-9]{3}"
+placeholder="00000-000"
+title="Digite o CEP no formato 00000-000"
+required>
+</p>
+</fieldset>
+
+<button type="submit">Enviar cadastro</button>
+</form>
+
+</section>
+</main>
+
+<div id="modal" class="modal" role="dialog"
+aria-modal="true" aria-labelledby="titulo-modal" hidden>
+
+<div class="modal-conteudo">
+<h2 id="titulo-modal">Confirmar cadastro</h2>
+
+<p>Deseja enviar o cadastro?</p>
+
+<button type="button" id="confirmar">
+Confirmar
+</button>
+
+<button type="button" id="fechar-modal">
+Fechar
+</button>
+</div>
+
+</div>
+
+<div id="toast" class="toast" role="status" hidden>
+Cadastro enviado com sucesso!
+</div>
+
+<footer>
+<p>&copy; 2026 ONG Esperança</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
